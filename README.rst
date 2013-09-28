@@ -12,11 +12,10 @@ Installation
 3. Add `'profiler.middleware.ProfilerMiddleware'` to `MIDDLEWARE_CLASSES`
 4. Optionally add `'profiler.middleware.StatProfMiddleware'` to `MIDDLEWARE_CLASSES` to enable Python code statistical profiling (using statprof_). WARNING: this is an experimental feature, beware of possible incorrect output.
    
-    if you get ``ValueError: signal only works in main Thread``
-    try this workaround:
-    ``
-    $ ./manage.py --noreload --nothreading
-    ``
+if you get ``ValueError: signal only works in main Thread`` try this workaround:
+    
+  $ ./manage.py runserver --noreload --nothreading
+    
 5. Add `url(r'^profiler/', include('profiler.urls'))` to your urlconf
 
 .. _statprof: https://github.com/bos/statprof.py
