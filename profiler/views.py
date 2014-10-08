@@ -1,7 +1,6 @@
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
-from django.core.cache import cache
 from django.contrib.auth.decorators import user_passes_test
 from django.core.urlresolvers import reverse
 from django.utils import simplejson
