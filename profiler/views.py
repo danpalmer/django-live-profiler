@@ -1,9 +1,9 @@
+import json
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.contrib.auth.decorators import user_passes_test
 from django.core.urlresolvers import reverse
-from django.utils import simplejson
 
 from aggregate.client import get_client
 
@@ -41,7 +41,7 @@ def stats_by_view(request):
 
     return render_to_response('profiler/by_view.html',
                               {'queries' : grouped,
-                               'stats' :simplejson.dumps(stats)},
+                               'stats' :json.dumps(stats)},
                               context_instance=RequestContext(request))
 
 @user_passes_test(lambda u:u.is_superuser)
