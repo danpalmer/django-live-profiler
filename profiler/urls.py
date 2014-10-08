@@ -6,5 +6,4 @@ urlpatterns = patterns(
     url(r'^by_view/$', 'stats_by_view', name='profiler_stats_by_view'),
     url(r'^code/$', 'python_stats', name='profiler_python_stats'),
     url(r'^reset/$', 'reset', name='profiler_reset'),
-    )
-
+)
